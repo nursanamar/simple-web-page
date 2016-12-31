@@ -9,11 +9,9 @@ body{
 h3{
 	text-align: center;
 }
-.wraper{
-	min-height: 100%;
+.wraper {
 	width: 100%;
-	padding-top: 25%;
-	padding-bottom: 25%;
+	height: 100%;
 }
 img{
 	border-radius:70%;

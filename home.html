@@ -6,29 +6,84 @@
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	 <link rel="stylesheet" href="asets/style/bootstrap.css" type="text/css"/>
 	 <link rel="stylesheet" href="asets/style/home.css">
+   <style media="screen">
+     .gambar {
+       width:100%;
+     }
+     .as {
+       text-align: center;
+     }
+     .credict {
+       text-align: center;
+     }
+     .cover {
+
+       padding-top: 25%;
+       padding-bottom: 25%;
+     }
+     .contact {
+       text-align: center;
+     }
+     .nama {
+       text-align: center;
+     }
+   </style>
+   <script src="https://unpkg.com/react@15/dist/react.js"></script>
+   <script src="asets/js/browser.min.js"></script>
+   <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
  </head>
 	 <body>
-	 	<div class="wraper">
-	 		<div  class="row">
-	 			<div  class="col-sm-4 col-sm-offset-4">
-	 				<div class="col-sm-12">
-	 					<img src="asets/img/me.jpg" style="width:100%"><br>
-	 					<h3>Nursan amar</h3>
-	 					<p  class="lead" style="text-align:center">Freelancer As Junior Web Developer</p>
-	 				</div>
-	 				<div  class="col-sm-12">
-	 					<ul align="center">
-	 						<li><img src= "asets/img/fb.jpg"></li>
-	 						<li><img src= "asets/img/mail.jpg"></li>
-	 						<li><img src= "asets/img/in.jpg"></li>
-	 						<li><a href=""><img src="asets/img/github.jpg"></li>
-	 					</ul>
-	 				</div>
-	 			</div>
-	 		</div>
+	 	<div class="wraper" id="tempat">
 	 	</div>
-	 	<div class="row foot">
-	 	<p align="center">Created by Nursan amar</p>
-	 	</div>
+    <script type="text/babel">
+      function Gambar(props) {
+        return <img className="gambar" src="asets/img/me.jpg" />;
+      }
+      function Nama(props) {
+        return <h3 className="nama">Nursan amar</h3>;
+      }
+      function As(props) {
+        return <p  className="lead as">Freelancer As Junior Web Developer</p>
+      }
+      function Contact() {
+        return (<ul className="contact">
+          <li><img src= "asets/img/fb.jpg" /></li>
+          <li><img src= "asets/img/mail.jpg" /></li>
+          <li><img src= "asets/img/in.jpg" /></li>
+          <li><a href=""><img src="asets/img/github.jpg" /></a></li>
+        </ul>);
+      }
+      function App() {
+        return (
+          <div>
+          <div  className="row cover">
+            <div  className="col-sm-4 col-sm-offset-4">
+              <div className="col-sm-12">
+                <Gambar />
+                <br/>
+                <Nama />
+                <br/>
+                <As />
+
+              </div>
+              <div className="col-sm-12">
+                <Contact />
+              </div>
+            </div>
+    	 		</div>
+          <div className="row foot">
+            <Credict />
+          </div>
+          </div>
+        )
+      }
+      function Credict() {
+        return <p className="credict">Created by Nursan amar</p>;
+      }
+      ReactDOM.render(
+				<App />,
+				document.getElementById('tempat')
+			);
+    </script>
 	 </body>
  </html>
