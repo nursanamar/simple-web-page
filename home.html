@@ -28,18 +28,18 @@
        text-align: center;
      }
    </style>
-   <script src="https://unpkg.com/react@15/dist/react.js"></script>
+   <script src="asets\js\react.js"></script>
    <script src="asets/js/browser.min.js"></script>
-   <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+   <script src="asets\js\react-dom.js"></script>
  </head>
 	 <body>
 	 	<div class="wraper" id="tempat">
 	 	</div>
     <script type="text/babel">
-      function Gambar(props) {
+      function ProfilePitcure(props) {
         return <img className="gambar" src="asets/img/me.jpg" />;
       }
-      function Nama(props) {
+      function Name(props) {
         return <h3 className="nama">Nursan amar</h3>;
       }
       function As(props) {
@@ -53,19 +53,24 @@
           <li><a href=""><img src="asets/img/github.jpg" /></a></li>
         </ul>);
       }
+      function Profile(){
+        return (
+          <div className="col-sm-12">
+            <ProfilePitcure />
+            <br/>
+            <Name />
+            <br/>
+            <As />
+
+          </div>
+        )
+      }
       function App() {
         return (
           <div>
           <div  className="row cover">
             <div  className="col-sm-4 col-sm-offset-4">
-              <div className="col-sm-12">
-                <Gambar />
-                <br/>
-                <Nama />
-                <br/>
-                <As />
-
-              </div>
+              <Profile />
               <div className="col-sm-12">
                 <Contact />
               </div>
