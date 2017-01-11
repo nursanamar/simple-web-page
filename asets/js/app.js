@@ -1,3 +1,9 @@
+/******************************************
+
+harus jalan di localhost
+masalah XMLHttpRequest()
+
+******************************************/
 function ProfilePitcure(props) {
   return <img className="gambar" src={props.picture}/>;
 }
